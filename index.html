@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>User Dashboard</h1>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search users by name..."
+        autocomplete="off"
+      />
+    </div>
+  </header>
+
+  <main>
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading users...</p>
+    </div>
+
+    <div id="error" class="error hidden">
+      <p id="error-message"></p>
+      <button id="retry-btn">Retry</button>
+    </div>
+
+    <div id="user-grid" class="user-grid hidden"></div>
+
+    <div id="pagination" class="pagination hidden">
+      <button id="prev-btn" disabled>Previous</button>
+      <span id="page-info"></span>
+      <button id="next-btn">Next</button>
+    </div>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
